@@ -69,7 +69,7 @@ const Products = (): JSX.Element => {
             gutterBottom
             color={theme.palette.text.secondary}
           >
-            We offer a range of products to support your business
+            We offer a range of products to support your business in technology slack
           </Typography>
         </Box>
         <Container>
