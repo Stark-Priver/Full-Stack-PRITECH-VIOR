@@ -9,6 +9,8 @@ import ColorModeContext from './utils/ColorModeContext';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
 
+// Added the Theme Toogler 
+
 const App = (): JSX.Element => {
   const [mode, setMode] = useState('dark');
   const colorMode = useMemo(
