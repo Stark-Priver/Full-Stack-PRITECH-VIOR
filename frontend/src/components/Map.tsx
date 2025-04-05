@@ -7,7 +7,7 @@ interface Props {
   coordinates: [number, number];
   zoom: number;
 }
-
+// Added the Open Map Logic to receive the Data from the Web 
 const Map = ({ coordinates, zoom }: Props): JSX.Element => {
   const theme = useTheme();
   const position: LatLngExpression = coordinates;
