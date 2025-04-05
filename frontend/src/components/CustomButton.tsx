@@ -5,7 +5,7 @@ interface Props {
   href: string;
   text: string;
 }
-
+// Created the Custom Button on the App 
 const CustomButton = ({ href, text }: Props): JSX.Element => {
   const theme = useTheme();
 
