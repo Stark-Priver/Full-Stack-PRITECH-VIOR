@@ -5,6 +5,9 @@ interface Props {
   [x: string]: any;
 }
 
+
+
+// Added the Spacer Function 
 const Spacer = ({ sx = [] }: Props): JSX.Element => {
   const theme = useTheme();
 
