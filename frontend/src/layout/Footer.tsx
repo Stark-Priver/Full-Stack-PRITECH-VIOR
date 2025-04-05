@@ -50,7 +50,7 @@ const Footer = (): JSX.Element => {
           </Box>
         </Grid>
       ))}
-    </Grid>
+    </Grid> 
   );
 };
 

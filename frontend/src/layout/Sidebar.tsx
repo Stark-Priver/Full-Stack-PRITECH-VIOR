@@ -70,9 +70,9 @@ const Sidebar = ({ open, onClose }: Props): JSX.Element => {
               </Box>
               <Box paddingY={1}>
                 <CustomButton href='#pricing' text='Pricing' />
-              </Box>
+              </Box>ss
               <Box paddingY={1}>
-                <CustomButton href='#about' text='About' />
+                <CustomButton href='#about' text='Programs' />
               </Box>
               <Box paddingY={1}>
                 <CustomButton href='#contact' text='Contact' />
