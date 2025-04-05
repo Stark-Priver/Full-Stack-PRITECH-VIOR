@@ -6,6 +6,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 
 const Home = (): JSX.Element => {
+// this  Returns a Single Div Namely home
   return (
     <div id='home'>
       <Hero />

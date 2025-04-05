@@ -1,8 +1,8 @@
 {
-  "name": "business-website",
+  "name": "Pritech Vior Website Full stack",
   "version": "0.1.0",
-  "description": "Business Website",
-  "author": "MG",
+  "description": "The webiste that Manages all activities done at Pritech Vior",
+  "author": "Priver",
   "license": "MIT",
   "private": true,
   "scripts": {
