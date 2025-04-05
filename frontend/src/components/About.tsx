@@ -81,8 +81,8 @@ const About = (): JSX.Element => {
             marginTop={theme.spacing(1)}
             gutterBottom
           >
-            We help software developers learn new skills, gain more experience
-            and create excellent applications
+            We help every curious Person learn new skills, gain more experience
+            and create excellentproducts in Tech Stack
           </Typography>
         </Box>
         <Container>
