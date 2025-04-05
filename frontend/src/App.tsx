@@ -10,7 +10,7 @@ import Layout from './layout/Layout';
 import Home from './pages/Home';
 
 // Added the Theme Toogler 
-
+//Todo adding more interactive map and 3D models in my Website
 const App = (): JSX.Element => {
   const [mode, setMode] = useState('dark');
   const colorMode = useMemo(
