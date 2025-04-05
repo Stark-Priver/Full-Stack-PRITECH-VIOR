@@ -32,6 +32,7 @@ const Hero = (): JSX.Element => {
       })
       .catch((error) => console.log(error));
   };
+// Addded thhe Logic To add the Hero section to the Home  component 
 
   useEffect(() => {
     fetchHero();
