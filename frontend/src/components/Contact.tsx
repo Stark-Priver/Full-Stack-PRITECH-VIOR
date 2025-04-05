@@ -24,7 +24,7 @@ interface ContactProps {
   latitude: number;
   longitude: number;
 }
-
+// The contact logic to receive the data
 const Contact = (): JSX.Element => {
   const theme = useTheme();
 
