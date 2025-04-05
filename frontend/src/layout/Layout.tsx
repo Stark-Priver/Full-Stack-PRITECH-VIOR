@@ -16,6 +16,10 @@ import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 
+
+// Created the Layout to display the Componets
+
+
 interface Props {
   children: React.ReactNode;
 }
