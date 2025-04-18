@@ -1,0 +1,1 @@
+source /home/pritechv/virtualenv/backend/3.10/bin/activate && cd /home/pritechv/backend
