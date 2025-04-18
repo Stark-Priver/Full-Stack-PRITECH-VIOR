@@ -32,7 +32,11 @@ const Contact = (): JSX.Element => {
 
   const fetchContact = () => {
     axios
+<<<<<<< HEAD
       .get<ContactProps[]>('http://pritechvior.co.tz/api/contact', {
+=======
+      .get<ContactProps[]>('http://127.0.0.1:8000/contact', {
+>>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
         headers: {
           Accept: 'application/json',
         },

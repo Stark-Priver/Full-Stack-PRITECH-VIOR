@@ -24,7 +24,11 @@ const Services = (): JSX.Element => {
 
   const fetchServices = () => {
     axios
+<<<<<<< HEAD
       .get<ServicesProps[]>('http://pritechvior.co.tz/api/services', {
+=======
+      .get<ServicesProps[]>('http://127.0.0.1:8000/services', {
+>>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
         headers: {
           Accept: 'application/json',
         },

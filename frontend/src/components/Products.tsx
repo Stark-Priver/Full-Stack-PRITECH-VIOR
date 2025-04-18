@@ -23,7 +23,11 @@ const Products = (): JSX.Element => {
 
   const fetchProducts = () => {
     axios
+<<<<<<< HEAD
       .get<ProductsProps[]>('http://pritechvior.co.tz/api/products', {
+=======
+      .get<ProductsProps[]>('http://127.0.0.1:8000/products', {
+>>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
         headers: {
           Accept: 'application/json',
         },

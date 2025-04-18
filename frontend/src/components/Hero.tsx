@@ -22,7 +22,11 @@ const Hero = (): JSX.Element => {
 
   const fetchHero = () => {
     axios
+<<<<<<< HEAD
       .get<HeroProps[]>('http://pritechvior.co.tz/api/hero', {
+=======
+      .get<HeroProps[]>('http://127.0.0.1:8000/hero', {
+>>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
         headers: {
           Accept: 'application/json',
         },
