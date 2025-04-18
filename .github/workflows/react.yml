@@ -1,0 +1,35 @@
+name: React CI
+
+on:
+  push:
+    branches: [master]
+
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node-version: ['18.x', '20.x']
+
+    steps:
+      - name: Checkout source Git branch
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Install Dependencies
+        run: |
+          cd frontend
+          npm install
+      
+      - name: Run Tests
+        run: |
+          cd frontend
+          npm run test
