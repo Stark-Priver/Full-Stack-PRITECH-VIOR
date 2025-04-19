@@ -18,11 +18,7 @@ const Footer = (): JSX.Element => {
 
   const fetchFooter = () => {
     axios
-<<<<<<< HEAD
-      .get<FooterProps[]>('http://pritechvior.co.tz/api/footer', {
-=======
-      .get<FooterProps[]>('http://127.0.0.1:8000/footer', {
->>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
+      .get<FooterProps[]>('https://api.pritechvior.co.tz/footer', {
         headers: {
           Accept: 'application/json',
         },

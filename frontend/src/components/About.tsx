@@ -34,11 +34,7 @@ const About = (): JSX.Element => {
 
   const fetchAbout = () => {
     axios
-<<<<<<< HEAD
-      .get<AboutProps[]>('http://pritechvior.co.tz/api/about', {
-=======
-      .get<AboutProps[]>('http://127.0.0.1:8000/about', {
->>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
+      .get<AboutProps[]>('https://api.pritechvior.co.tz/about', {
         headers: {
           Accept: 'application/json',
         },

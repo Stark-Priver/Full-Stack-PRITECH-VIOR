@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
   "name": "pritech-vior-website-fullstack",
   "version": "0.1.0",
   "description": "The website that manages all activities done at Pritech Vior",
-=======
-  "name": "Pritech Vior Website Full stack",
-  "version": "0.1.0",
-  "description": "The webiste that Manages all activities done at Pritech Vior",
->>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
   "author": "Priver",
   "license": "MIT",
   "private": true,
@@ -23,11 +17,7 @@
     "prettier": "prettier \"**/*.+(json|ts|tsx)\"",
     "format:check": "npm run prettier -- --check",
     "format:fix": "npm run prettier -- --write",
-<<<<<<< HEAD
     "types:check": "tsc --noEmit --pretty"
-=======
-    "types:check": "bash -c tsc --noEmit --pretty"
->>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
@@ -48,10 +38,7 @@
     "@mui/icons-material": "^5.14.6",
     "@mui/material": "^5.14.6",
     "axios": "^1.4.0",
-<<<<<<< HEAD
     "g": "^2.0.1",
-=======
->>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
@@ -59,14 +46,9 @@
     "react-helmet-async": "^1.3.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.15.0",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
     "react-visibility-sensor": "^5.1.1",
     "serve": "^14.2.4",
-=======
-    "react-scripts": "5.0.1",
-    "react-visibility-sensor": "^5.1.1",
->>>>>>> 9f9707b32520a5784fa7d4b6c66bb97ead431cb7
     "web-vitals": "^3.4.0"
   },
   "devDependencies": {
