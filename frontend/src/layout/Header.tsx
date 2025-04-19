@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-// Material UI
+// MUI Core
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -12,17 +12,17 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
-// Material Icons
+// MUI Icons
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuIcon from '@mui/icons-material/Menu';
 
-// Custom Components
+// Custom Components & Context
 import CustomButton from '../components/CustomButton';
 import ColorModeContext from '../utils/ColorModeContext';
 
-// Logo (new one)
-import logo from '../assets/logo/logo.png'; // Make sure it's placed here
+// Logo
+import logo from '../assets/logo/logo.png';
 
 interface Props {
   onSidebarOpen: () => void;
@@ -32,17 +32,27 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
 
+  const isDark = theme.palette.mode === 'dark';
+
   return (
     <AppBar
       color="transparent"
       position="sticky"
       sx={{
-        border: 0,
+        top: 0,
+        zIndex: 100,
         padding: '10px 0',
         marginBottom: '5px',
-        top: 'auto',
-        boxShadow:
-          '0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)',
+        backdropFilter: 'blur(12px)',
+        backgroundColor: isDark
+          ? alpha(theme.palette.background.default, 0.4)
+          : 'rgba(255, 255, 255, 0.5)',
+        boxShadow: isDark
+          ? '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+          : '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+        border: isDark
+          ? '1px solid rgba(255, 255, 255, 0.18)'
+          : '1px solid rgba(0, 0, 0, 0.1)',
       }}
     >
       <Toolbar sx={{ minHeight: 70 }}>
@@ -61,9 +71,16 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
             variant="h6"
             sx={{
               display: { xs: 'none', md: 'block' },
-              color: theme.palette.text.primary,
               fontWeight: 'bold',
               textTransform: 'uppercase',
+              background: 'linear-gradient(45deg, #00ffff, #ff00ff, #00ffcc, #ffcc00)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              color: 'transparent',
+              WebkitTextFillColor: 'transparent',
+              animation: 'shine 8s linear infinite',
+              backgroundSize: '400% 400%',
+              filter: isDark ? 'drop-shadow(0 0 2px #00ffff)' : 'drop-shadow(0 0 1px #666)',
             }}
           >
             Pritech
@@ -98,9 +115,9 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
           <IconButton
             onClick={colorMode.toggleColorMode}
             aria-label="Theme Mode"
-            color={theme.palette.mode === 'dark' ? 'warning' : 'inherit'}
+            color={isDark ? 'warning' : 'default'}
           >
-            {theme.palette.mode === 'dark' ? (
+            {isDark ? (
               <Tooltip title="Turn on the light">
                 <LightModeIcon fontSize="medium" />
               </Tooltip>
@@ -126,15 +143,21 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
           >
             <MenuIcon
               sx={{
-                color:
-                  theme.palette.mode === 'dark'
-                    ? theme.palette.primary.main
-                    : theme.palette.success.dark,
+                color: isDark ? theme.palette.primary.main : theme.palette.success.dark,
               }}
             />
           </Button>
         </Box>
       </Toolbar>
+
+      {/* Animation for text shine */}
+      <style>{`
+        @keyframes shine {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </AppBar>
   );
 };
