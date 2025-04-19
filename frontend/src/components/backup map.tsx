@@ -48,14 +48,13 @@ const Map = ({ coordinates, zoom }: Props): JSX.Element => {
 
   useEffect(() => {
     if (globeRef.current) {
-      // Set the initial camera view with a zoomed-out effect
       globeRef.current.pointOfView(
         {
           lat: coordinates[0],
           lng: coordinates[1],
-          altitude: 2, // Increase this value for more zoomed out effect
+          altitude: zoom / 10,
         },
-        1500 // Transition duration (in ms)
+        1500
       );
       
       globeRef.current.controls().autoRotate = true;
@@ -89,7 +88,7 @@ const Map = ({ coordinates, zoom }: Props): JSX.Element => {
     <div
       ref={containerRef} // Attach the ref to the container div
       style={{
-        height: '70vh', // Use full viewport height
+        height: '100vh', // Use full viewport height
         width: '100%', // Ensure it takes full width
         display: 'flex',
         justifyContent: 'center',
