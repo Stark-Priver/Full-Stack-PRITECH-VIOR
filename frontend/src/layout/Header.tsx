@@ -83,7 +83,7 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
             <CustomButton href='#products' text='Products' />
             <CustomButton href='#services' text='Services' />
             <CustomButton href='#pricing' text='Pricing' />
-            <CustomButton href='#about' text='Programs' />
+            <CustomButton href='#about' text='About' />
             <CustomButton href='#contact' text='Contact' />
           </Box>
           <Divider

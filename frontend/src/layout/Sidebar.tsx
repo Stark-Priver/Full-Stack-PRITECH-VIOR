@@ -57,7 +57,7 @@ const Sidebar = ({ open, onClose }: Props): JSX.Element => {
                     marginLeft: 1,
                   }}
                 >
-                  Bob's Company
+                  Pritech Vior 
                 </Typography>
               </IconButton>
             </Link>
@@ -72,7 +72,7 @@ const Sidebar = ({ open, onClose }: Props): JSX.Element => {
                 <CustomButton href='#pricing' text='Pricing' />
               </Box>ss
               <Box paddingY={1}>
-                <CustomButton href='#about' text='Programs' />
+                <CustomButton href='#about' text='About' />
               </Box>
               <Box paddingY={1}>
                 <CustomButton href='#contact' text='Contact' />
