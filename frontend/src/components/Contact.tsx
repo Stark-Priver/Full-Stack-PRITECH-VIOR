@@ -249,7 +249,7 @@ const Contact = (): JSX.Element => {
                 Contact Us
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
-                We'd love to hear from you
+                Let's Link Together
               </Typography>
             </Box>
 
