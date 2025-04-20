@@ -1,41 +1,43 @@
-import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 
-interface Props {
+interface CustomButtonProps {
   href: string;
   text: string;
 }
-// Created the Custom Button on the App 
-const CustomButton = ({ href, text }: Props): JSX.Element => {
+
+const CustomButton = ({ href, text }: CustomButtonProps): JSX.Element => {
   const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
 
   return (
-    <Button
-      component='a'
-      color='primary'
+    <Link
       href={href}
-      variant='text'
+      underline="none"
       sx={{
-        color: theme.palette.text.primary,
-        textTransform: 'uppercase',
-        marginX: 1.5,
-        marginLeft: '15px',
-        '&:active': {
-          color:
-            theme.palette.mode === 'dark'
-              ? theme.palette.primary.main
-              : theme.palette.success.dark,
-        },
+        mx: 1.5,
+        display: 'inline-block',
+        fontWeight: 600,
+        letterSpacing: 0.5,
+        color: isDark ? '#00ffff' : '#333',
+        textShadow: isDark
+          ? '0 0 5px #00ffff, 0 0 10px #00ffff'
+          : '0 0 3px rgba(0,0,0,0.2)',
+        transition: 'all 0.3s ease-in-out',
         '&:hover': {
-          color:
-            theme.palette.mode === 'dark'
-              ? theme.palette.primary.main
-              : theme.palette.success.dark,
+          color: isDark ? '#ffffff' : '#000000',
+          textShadow: isDark
+            ? '0 0 10px #00ffff, 0 0 20px #00ffff'
+            : '0 0 6px rgba(0,0,0,0.4)',
+        },
+        '&:active': {
+          color: isDark ? theme.palette.primary.main : theme.palette.success.dark,
         },
       }}
     >
       {text}
-    </Button>
+    </Link>
   );
 };
 

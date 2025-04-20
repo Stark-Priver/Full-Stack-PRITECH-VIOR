@@ -5,10 +5,10 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import StormIcon from '@mui/icons-material/Storm';
 import { useTheme } from '@mui/material/styles';
 
 import CustomButton from '../components/CustomButton';
+import logo from '../assets/logo/logo.png';
 
 interface Props {
   onClose: () => void;
@@ -33,36 +33,28 @@ const Sidebar = ({ open, onClose }: Props): JSX.Element => {
         }}
       >
         <Box height='100%'>
-          <Box width={1}>
+          <Box width={1} padding={2} display="flex" flexDirection="column" alignItems="center">
+            {/* Logo Section */}
             <Link to='/' style={{ textDecoration: 'none' }}>
-              <IconButton size='large' disabled>
-                <StormIcon
-                  sx={{
-                    color:
-                      theme.palette.mode === 'dark'
-                        ? theme.palette.primary.main
-                        : theme.palette.success.dark,
-                    height: 40,
-                    width: 40,
-                  }}
-                />
+              <Box width="100%" textAlign="center" marginBottom={3}>
+                <img src={logo} alt="Pritech Vior Logo" style={{ width: '150px', height: 'auto' }} />
                 <Typography
                   variant='h6'
                   sx={{
-                    flexGrow: 1,
                     color: theme.palette.text.primary,
                     fontWeight: 'bold',
                     textTransform: 'uppercase',
-                    textDecoration: 'none',
-                    marginLeft: 1,
+                    marginTop: 1,
                   }}
                 >
-                  Bob's Company
+                  Pritech Vior
                 </Typography>
-              </IconButton>
+              </Box>
             </Link>
           </Box>
-          <Box padding={2}>
+
+          {/* Sidebar Links */}
+          <Box paddingX={2}>
             <Box paddingY={2}>
               <CustomButton href='#products' text='Products' />
               <Box paddingY={1}>
@@ -70,9 +62,9 @@ const Sidebar = ({ open, onClose }: Props): JSX.Element => {
               </Box>
               <Box paddingY={1}>
                 <CustomButton href='#pricing' text='Pricing' />
-              </Box>ss
+              </Box>
               <Box paddingY={1}>
-                <CustomButton href='#about' text='Programs' />
+                <CustomButton href='#about' text='About' />
               </Box>
               <Box paddingY={1}>
                 <CustomButton href='#contact' text='Contact' />
